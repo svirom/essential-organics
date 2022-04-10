@@ -1,0 +1,326 @@
+.banner-top {
+	padding: 1rem 0;
+	color: #ffffff;
+	text-align: center;
+	background-color: $color-secondary;
+
+	span {
+		font-size: 1.75rem;
+		font-weight: 700;
+	}
+}
+
+.list {
+	li {
+		position: relative;
+		margin-bottom: 1.25rem;
+		padding-left: 3rem;
+
+		&::before, &::after {
+			position: absolute;
+			content: '';
+		}
+
+		&::before {
+			left: 0;
+			top: 3px;
+			width: 28px;
+			height: 28px;
+			border: 2px solid $color-main;
+			border-radius: 50%;
+		}
+
+		&::after {
+			left: 6px;
+			top: 11px;
+			width: 16px;
+			height: 9px;
+			border-left: 4px solid $color-main;
+			border-bottom: 4px solid $color-main;
+			transform: rotate(-45deg);
+		}
+	}
+
+	&--light {
+		li {	
+			&::before {
+				border-color: #ffffff;
+			}
+	
+			&::after {
+				border-left-color: #ffffff;
+				border-bottom-color: #ffffff;
+			}
+		}
+	}
+}
+
+.section {
+	padding-top: 3.5rem;
+	padding-bottom: 4rem;
+
+	&--title {
+		padding-top: 0;
+	}
+
+	&.before-title {
+		padding-bottom: 6.625rem;
+	}
+}
+
+.hero {
+	position: relative;
+	padding-bottom: 206px;
+	background: url('../img/bcgr-texture11.jpg') center/cover no-repeat;
+
+	h1 {
+		text-align: center;
+	}
+
+	&__column {
+		border-radius: 0.625rem;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+		background-color: #ffffff;
+
+		&[class^="col-"] {
+			padding: 1.5rem;
+		}
+	}
+
+	&__subtitle {
+		font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+	}
+
+	&__main {
+		margin-top: 3.75rem;
+	}
+
+	&__main-left {
+		padding-top: 3rem;
+	}
+
+	&__main-right {
+		// padding: 0.5rem;
+		// border: 1px solid $color-border;
+
+		img {
+			vertical-align: bottom;
+		}
+	}
+}
+
+.under-hero {
+	margin-top: -252px;
+}
+
+// box
+.box {
+	position: relative;
+	max-width: 720px;
+	margin: 2.5rem auto;
+	border-radius: 0.625rem;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+
+	&__header {
+		padding: 1.25rem 4rem 0;
+		border-bottom: 4px solid $color-accent;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+		text-align: center;
+		color: $color-accent;
+	}
+
+	&__content {
+		padding: 1.75rem 4rem 1.25rem;
+	}
+
+	.list {
+		li {
+			&::before {
+				border-color: $color-main;
+			}
+
+			&::after {
+				border-left-color: $color-main;
+				border-bottom-color: $color-main;
+			}
+		}
+	}
+
+	&--light {		
+		.box__header {
+			color: #ffffff;
+			background-color: $color-accent;
+
+			h1, h2, h3, h4 {
+				color: #ffffff;
+			}
+		}
+	}
+
+	&--title {
+		margin-top: -4rem;
+		margin-bottom: 4rem;
+		padding: 1.5rem;
+		text-align: center;
+
+		h2, h3, h4 {
+			margin-bottom: 0;
+		}
+	}
+
+	&--wide {
+		max-width: 860px;
+	}
+
+	&--100 {
+		max-width: 100%;
+	}
+
+	&--counter {
+		&::before {
+			position: absolute;
+			counter-increment: recommendations;
+			content: counter(recommendations);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			left: 50%;
+			top: -2rem;
+			transform: translateX(-50%);
+			width: 4rem;
+			height: 4rem;
+			font-size: 2rem;
+			font-weight: 700;
+			color: #ffffff;
+			text-align: center;
+			border: 7px solid #ffffff;
+			border-radius: 50%;
+			box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
+			background-color: $color-accent;
+			z-index: 3;
+		}
+
+		.box__header {
+			padding-top: 2.5rem;
+		}
+	}
+}
+
+.card {
+	margin-top: 2rem;
+	// padding: 1.5rem;
+	border: 1px solid $color-main;
+	border: 1px solid rgba($color-underline, 35%);
+
+	&__header {
+		padding: 1.5rem 1.5rem 0.5rem;
+		background-color: rgba($color-underline, 35%);
+	}
+
+	&__content {
+		padding: 1rem 1.5rem 1rem;
+	}
+}
+
+.img-arrow {
+	position: relative;
+
+	&__icon {
+		position: absolute;
+		left: -70px;
+    width: 92px;
+    bottom: 5px;
+	}
+}
+
+.hyperlinks {
+	p, a {
+		word-break: break-all;
+	}
+}
+
+@include until($lg) {
+	.hero {
+		&__main {
+			margin-top: 2.5rem;
+		}
+	
+		&__main-left {
+			padding-top: 1rem;
+			text-align: center;
+		}
+	
+		&__main-right {
+			text-align: center;
+		}
+	}
+
+	.section {
+		padding-top: 2rem;
+		padding-bottom: 2.5rem;
+	}
+
+	.box {
+		&--title {
+			margin-top: -6.5rem;
+		}
+	}
+
+	.img-arrow {
+		&__icon {
+			display: none;
+		}
+	}
+}
+
+@include until($md) {
+	.hero {
+		&__subtitle {
+			font-size: 1.25rem;
+		}
+
+		&__main {
+			margin-top: 1.5rem;
+		}
+	}
+
+	.box {
+		&__header {
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+		}
+
+		&__content {
+			padding: 1.5rem 1.25rem 1.25rem;
+		}
+	}
+
+	.list {
+		li {
+			margin-bottom: 1rem;
+
+			&::before {
+				top: 1px;
+			}
+
+			&::after {
+				top: 9px;
+			}
+		}
+	}
+
+	.card {
+		// padding: 1rem;
+		&__header {
+			padding: 1rem 1rem 0.5rem;
+		}
+	
+		&__content {
+			padding: 1rem;
+		}
+	}
+}
