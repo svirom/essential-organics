@@ -71,7 +71,7 @@
 .hero {
 	position: relative;
 	padding-bottom: 206px;
-	background: url('../img/bcgr-texture11.jpg') center/cover no-repeat;
+	background: url('../img/bcgr-texture2.jpg') center/cover no-repeat;
 
 	h1 {
 		text-align: center;
@@ -172,6 +172,18 @@
 		}
 	}
 
+	&--orange {
+		.box__header {
+			color: #ffffff;
+			border-bottom-color: $color-underline;
+			background-color: $color-underline;
+
+			h1, h2, h3, h4 {
+				color: #ffffff;
+			}
+		}
+	}
+
 	&--wide {
 		max-width: 860px;
 	}
@@ -212,8 +224,6 @@
 
 .card {
 	margin-top: 2rem;
-	// padding: 1.5rem;
-	border: 1px solid $color-main;
 	border: 1px solid rgba($color-underline, 35%);
 
 	&__header {
@@ -223,6 +233,23 @@
 
 	&__content {
 		padding: 1rem 1.5rem 1rem;
+	}
+
+	&--bright {
+		border: 1px solid $color-underline;
+
+		.card__header {
+			color: #ffffff;
+			background-color: $color-underline;
+
+			h2, a, p {
+				color: #ffffff;
+			}
+		}
+
+		.card__content {
+			background-color: #ffffff;
+		}
 	}
 }
 
@@ -237,9 +264,43 @@
 	}
 }
 
+.img-rotate {
+	position: relative;
+	margin-top: 9.25rem;
+
+	&__icon {
+		position: absolute;
+		left: 4px;
+    top: -74px;
+		transform: rotate(59deg);
+	}
+}
+
 .hyperlinks {
+	padding-top: 3.5rem;
+
 	p, a {
 		word-break: break-all;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+}
+
+.special-offer {
+	border-radius: 0.625rem;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+
+	&[class^="col-"] {
+		padding: 1.5rem;
+	}
+}
+
+@include at-least($md) {
+	.text-md-left {
+		text-align: left;
 	}
 }
 

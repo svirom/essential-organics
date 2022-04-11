@@ -5066,8 +5066,30 @@ ol {
   background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #f8f5f4 30%, #f8f5f4 70%, #ffffff 70%, #ffffff 100%);
 }
 
+.bg-underline-line {
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(30%, #ffffff), color-stop(30%, #fb4803), color-stop(70%, #fb4803), color-stop(70%, #ffffff), to(#ffffff));
+  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 30%, #fb4803 30%, #fb4803 70%, #ffffff 70%, #ffffff 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #fb4803 30%, #fb4803 70%, #ffffff 70%, #ffffff 100%);
+}
+
 .bg-border {
   background-color: #f8f5f4;
+}
+
+.bg-texture {
+  background: url("../img/bcgr-texture.jpg") center/cover no-repeat;
+}
+
+.bg-texture2 {
+  background: url("../img/bcgr-texture2.jpg") center/cover no-repeat;
+}
+
+.bg-underline {
+  background-color: rgba(251, 72, 3, 0.35);
+}
+.bg-underline.box {
+  background-color: rgba(251, 72, 3, 0.35);
 }
 
 .color-main {
@@ -5092,6 +5114,10 @@ ol {
 
 .color-underline {
   color: #fb4803;
+}
+
+.underline-yellow {
+  background-color: rgba(255, 247, 4, 0.5);
 }
 
 .text-center {
@@ -5178,12 +5204,37 @@ ol {
   background: linear-gradient(to top, rgba(251, 72, 3, 0.35) 0%, rgba(251, 72, 3, 0.35) 30%, transparent 30%, transparent 100%);
 }
 
+.underline-bold {
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, from(#322f32), color-stop(10%, #322f32), color-stop(10%, transparent), to(transparent));
+  background: -o-linear-gradient(bottom, #322f32 0%, #322f32 10%, transparent 10%, transparent 100%);
+  background: linear-gradient(to top, #322f32 0%, #322f32 10%, transparent 10%, transparent 100%);
+}
+
 .hr {
   width: 100%;
   height: 2px;
   margin-top: 4rem;
   margin-bottom: 4rem;
   background-color: rgba(50, 47, 50, 0.75);
+}
+.hr--dashed {
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(30%, transparent), color-stop(0%, rgba(50, 47, 50, 0.75)));
+  background-image: -o-linear-gradient(right, transparent 30%, rgba(50, 47, 50, 0.75) 0%);
+  background-image: linear-gradient(to left, transparent 30%, rgba(50, 47, 50, 0.75) 0%);
+  background-size: 24px 2px;
+}
+.hr--card {
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(30%, transparent), color-stop(0%, rgba(251, 72, 3, 0.35)));
+  background-image: -o-linear-gradient(right, transparent 30%, rgba(251, 72, 3, 0.35) 0%);
+  background-image: linear-gradient(to left, transparent 30%, rgba(251, 72, 3, 0.35) 0%);
+  background-size: 24px 2px;
+}
+.hr--small {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .bg-main .hr, .bg-accent .hr, .bg-secondary .hr {
@@ -5200,6 +5251,21 @@ ol {
   background-color: rgba(37, 84, 72, 0.75);
 }
 
+.box-dashed {
+  padding: 1.5rem;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(30%, transparent), color-stop(0%, #fb4803)), -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(0%, #fb4803)), -webkit-gradient(linear, left top, right top, color-stop(30%, transparent), color-stop(0%, #fb4803)), -webkit-gradient(linear, left bottom, left top, color-stop(30%, transparent), color-stop(0%, #fb4803));
+  background-image: -o-linear-gradient(right, transparent 30%, #fb4803 0%), -o-linear-gradient(top, transparent 30%, #fb4803 0%), -o-linear-gradient(left, transparent 30%, #fb4803 0%), -o-linear-gradient(bottom, transparent 30%, #fb4803 0%);
+  background-image: linear-gradient(to left, transparent 30%, #fb4803 0%), linear-gradient(to bottom, transparent 30%, #fb4803 0%), linear-gradient(to right, transparent 30%, #fb4803 0%), linear-gradient(to top, transparent 30%, #fb4803 0%);
+  background-position: top, left, bottom, right;
+  background-size: 24px 4px, 4px 24px, 24px 4px, 4px 24px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+}
+.box-dashed--light {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(30%, transparent), color-stop(0%, #ffffff)), -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(0%, #ffffff)), -webkit-gradient(linear, left top, right top, color-stop(30%, transparent), color-stop(0%, #ffffff)), -webkit-gradient(linear, left bottom, left top, color-stop(30%, transparent), color-stop(0%, #ffffff));
+  background-image: -o-linear-gradient(right, transparent 30%, #ffffff 0%), -o-linear-gradient(top, transparent 30%, #ffffff 0%), -o-linear-gradient(left, transparent 30%, #ffffff 0%), -o-linear-gradient(bottom, transparent 30%, #ffffff 0%);
+  background-image: linear-gradient(to left, transparent 30%, #ffffff 0%), linear-gradient(to bottom, transparent 30%, #ffffff 0%), linear-gradient(to right, transparent 30%, #ffffff 0%), linear-gradient(to top, transparent 30%, #ffffff 0%);
+}
+
 @media screen and (max-width: 991px) {
   .img-initial-lg {
     float: none;
@@ -5208,6 +5274,12 @@ ol {
   }
 }
 @media screen and (max-width: 767px) {
+  .img-initial-md {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .font-size-100 {
     font-size: 0.875rem;
   }
@@ -5237,13 +5309,13 @@ ol {
   }
 }
 .banner-top {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   color: #ffffff;
   text-align: center;
   background-color: #255448;
 }
 .banner-top span {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
@@ -5294,8 +5366,22 @@ ol {
   padding-bottom: 6.625rem;
 }
 
+.hero {
+  position: relative;
+  padding-bottom: 206px;
+  background: url("../img/bcgr-texture2.jpg") center/cover no-repeat;
+}
 .hero h1 {
   text-align: center;
+}
+.hero__column {
+  border-radius: 0.625rem;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+.hero__column[class^=col-] {
+  padding: 1.5rem;
 }
 .hero__subtitle {
   font-size: 1.5rem;
@@ -5310,6 +5396,10 @@ ol {
 }
 .hero__main-right img {
   vertical-align: bottom;
+}
+
+.under-hero {
+  margin-top: -252px;
 }
 
 .box {
@@ -5355,8 +5445,19 @@ ol {
 .box--title h2, .box--title h3, .box--title h4 {
   margin-bottom: 0;
 }
+.box--orange .box__header {
+  color: #ffffff;
+  border-bottom-color: #fb4803;
+  background-color: #fb4803;
+}
+.box--orange .box__header h1, .box--orange .box__header h2, .box--orange .box__header h3, .box--orange .box__header h4 {
+  color: #ffffff;
+}
 .box--wide {
   max-width: 860px;
+}
+.box--100 {
+  max-width: 100%;
 }
 .box--counter::before {
   position: absolute;
@@ -5395,10 +5496,77 @@ ol {
 
 .card {
   margin-top: 2rem;
-  padding: 1.5rem;
-  border: 1px solid #322f32;
+  border: 1px solid rgba(251, 72, 3, 0.35);
+}
+.card__header {
+  padding: 1.5rem 1.5rem 0.5rem;
+  background-color: rgba(251, 72, 3, 0.35);
+}
+.card__content {
+  padding: 1rem 1.5rem 1rem;
+}
+.card--bright {
+  border: 1px solid #fb4803;
+}
+.card--bright .card__header {
+  color: #ffffff;
+  background-color: #fb4803;
+}
+.card--bright .card__header h2, .card--bright .card__header a, .card--bright .card__header p {
+  color: #ffffff;
+}
+.card--bright .card__content {
+  background-color: #ffffff;
 }
 
+.img-arrow {
+  position: relative;
+}
+.img-arrow__icon {
+  position: absolute;
+  left: -70px;
+  width: 92px;
+  bottom: 5px;
+}
+
+.img-rotate {
+  position: relative;
+  margin-top: 9.25rem;
+}
+.img-rotate__icon {
+  position: absolute;
+  left: 4px;
+  top: -74px;
+  -webkit-transform: rotate(59deg);
+      -ms-transform: rotate(59deg);
+          transform: rotate(59deg);
+}
+
+.hyperlinks {
+  padding-top: 3.5rem;
+}
+.hyperlinks p, .hyperlinks a {
+  word-break: break-all;
+}
+.hyperlinks p {
+  font-size: 1rem;
+}
+
+.special-offer {
+  border-radius: 0.625rem;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+.special-offer[class^=col-] {
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .text-md-left {
+    text-align: left;
+  }
+}
 @media screen and (max-width: 991px) {
   .hero__main {
     margin-top: 2.5rem;
@@ -5418,6 +5586,10 @@ ol {
 
   .box--title {
     margin-top: -6.5rem;
+  }
+
+  .img-arrow__icon {
+    display: none;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5446,7 +5618,10 @@ ol {
     top: 9px;
   }
 
-  .card {
+  .card__header {
+    padding: 1rem 1rem 0.5rem;
+  }
+  .card__content {
     padding: 1rem;
   }
 }
