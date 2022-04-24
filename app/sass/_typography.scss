@@ -43,6 +43,10 @@ a {
   }
 }
 
+sup {
+  font-size: 70%;
+}
+
 ul, ol {
   @include font(1.5rem, 500, 1.4);
 

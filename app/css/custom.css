@@ -4978,6 +4978,10 @@ a:hover {
   color: #0000e6;
 }
 
+sup {
+  font-size: 70%;
+}
+
 ul, ol {
   font-size: 1.5rem;
   font-weight: 500;
@@ -5118,6 +5122,11 @@ ol {
 
 .underline-yellow {
   background-color: rgba(255, 247, 4, 0.5);
+}
+
+.underline-orange {
+  padding: 4px 20px;
+  background-color: rgba(251, 72, 3, 0.6);
 }
 
 .text-center {
@@ -5549,7 +5558,8 @@ ol {
   word-break: break-all;
 }
 .hyperlinks p {
-  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
 }
 
 .special-offer {
@@ -5562,9 +5572,141 @@ ol {
   padding: 1.5rem;
 }
 
+.price-card {
+  max-width: 360px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1.875rem 0.75rem 1.25rem;
+  text-align: center;
+  border: 4px solid #f8f5f4;
+}
+.price-card .price-card__title {
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+}
+.price-card .price-card__supply {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  color: #545454;
+}
+.price-card .price-card__pack {
+  margin-bottom: 0.25rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+.price-card__img {
+  height: 180px;
+  margin-bottom: 0.5rem;
+}
+.price-card__img img {
+  vertical-align: bottom;
+}
+.price-card .price-card__price {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  color: #545454;
+}
+.price-card .price-card__price span {
+  position: relative;
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+.price-card .price-card__price span::after {
+  position: absolute;
+  content: "";
+  bottom: 17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  background-color: #fb4803;
+}
+.price-card .price-card__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.price-card .price-card__amount > span:last-child {
+  margin-left: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #6f6f6f;
+  text-align: left;
+}
+.price-card .price-card__amount > span:last-child span {
+  display: block;
+}
+.price-card .price-card__save {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fb4803;
+}
+.price-card .price-button {
+  display: block;
+  margin-bottom: 0.75rem;
+  padding: 1.125rem 0.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 5px 5px #ada797;
+          box-shadow: 0px 5px 5px #ada797;
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(50, 47, 50, 0.25);
+          box-shadow: 2px 2px 5px 2px rgba(50, 47, 50, 0.25);
+  background-color: #fb4803;
+}
+.price-card .price-card__total {
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.price-card .price-card__guarantee {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #255448;
+}
+.price-card--white {
+  border-color: #ffffff;
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+.price-card--1, .price-card--3 {
+  background: -o-radial-gradient(center -140px, circle, #f8f5f4 0, #f8f5f4 50%, #ffffff 50%);
+  background: radial-gradient(circle at center -140px, #f8f5f4 0, #f8f5f4 50%, #ffffff 50%);
+}
+.price-card--1 .price-card__img, .price-card--3 .price-card__img {
+  padding-top: 10px;
+}
+.price-card--6 {
+  border-color: #fb4803;
+  background: -o-radial-gradient(center -140px, circle, #fb4803 0, #fb4803 50%, #ffffff 50%);
+  background: radial-gradient(circle at center -140px, #fb4803 0, #fb4803 50%, #ffffff 50%);
+}
+.price-card--6 .price-card__title {
+  color: #fb4803;
+  color: #ffffff;
+}
+
 @media screen and (min-width: 768px) {
   .text-md-left {
     text-align: left;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .price-card .price-card__title {
+    font-size: 1.875rem;
   }
 }
 @media screen and (max-width: 991px) {
@@ -5623,5 +5765,19 @@ ol {
   }
   .card__content {
     padding: 1rem;
+  }
+
+  .price-card .price-card__pack {
+    font-size: 1.5rem;
+  }
+  .price-card .price-card__amount {
+    font-size: 2.5rem;
+  }
+  .price-card .price-button {
+    font-size: 1.5rem;
+  }
+  .price-card .price-card__total,
+.price-card .price-card__guarantee {
+    font-size: 1rem;
   }
 }
