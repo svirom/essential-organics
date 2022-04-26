@@ -315,7 +315,6 @@
 	.price-card__supply {
 		margin-bottom: 0;
 		font-size: 1.125rem;
-		color: #545454;
 	}
 
 	.price-card__pack {
@@ -432,6 +431,11 @@
 			color: $color-underline;
 			color: #ffffff;
 		}
+
+		.price-card__supply,
+		.price-card__pack {
+			color: #000000;
+		}
 	}
 }
 
@@ -490,7 +494,7 @@
 		}
 
 		&__main {
-			margin-top: 1.5rem;
+			margin-top: 2rem;
 		}
 	}
 

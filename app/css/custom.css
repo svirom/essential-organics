@@ -5125,7 +5125,7 @@ ol {
 }
 
 .underline-orange {
-  padding: 4px 20px;
+  padding: 10px 24px;
   background-color: rgba(251, 72, 3, 0.6);
 }
 
@@ -5587,7 +5587,6 @@ ol {
 .price-card .price-card__supply {
   margin-bottom: 0;
   font-size: 1.125rem;
-  color: #545454;
 }
 .price-card .price-card__pack {
   margin-bottom: 0.25rem;
@@ -5698,6 +5697,10 @@ ol {
   color: #fb4803;
   color: #ffffff;
 }
+.price-card--6 .price-card__supply,
+.price-card--6 .price-card__pack {
+  color: #000000;
+}
 
 @media screen and (min-width: 768px) {
   .text-md-left {
@@ -5739,7 +5742,7 @@ ol {
     font-size: 1.25rem;
   }
   .hero__main {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   .box__header {
