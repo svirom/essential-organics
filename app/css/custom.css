@@ -5594,7 +5594,7 @@ ol {
   font-weight: 700;
 }
 .price-card__img {
-  height: 180px;
+  height: 190px;
   margin-bottom: 0.5rem;
 }
 .price-card__img img {
@@ -5686,7 +5686,7 @@ ol {
   background: radial-gradient(circle at center -140px, #f8f5f4 0, #f8f5f4 50%, #ffffff 50%);
 }
 .price-card--1 .price-card__img, .price-card--3 .price-card__img {
-  padding-top: 10px;
+  padding-top: 15px;
 }
 .price-card--6 {
   border-color: #fb4803;
