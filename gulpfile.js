@@ -55,20 +55,20 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-function scripts() {
-  return src([
-    // 'node_modules/jquery/dist/jquery.js',
-    'app/js/custom.js'
-  ])
-    .pipe(concat('custom.min.js'))
-    .pipe(terser())
-    .pipe(dest('app/js'))
-    .pipe(browserSync.stream());
-}
+// function scripts() {
+//   return src([
+//     // 'node_modules/jquery/dist/jquery.js',
+//     'app/js/custom.js'
+//   ])
+//     .pipe(concat('custom.min.js'))
+//     .pipe(terser())
+//     .pipe(dest('app/js'))
+//     .pipe(browserSync.stream());
+// }
 
 function watching() {
   watch(['app/sass/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/custom.min.js'], scripts);
+  // watch(['app/js/**/*.js', '!app/js/custom.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
 
@@ -77,8 +77,8 @@ function build() {
     'app/css/custom.css',
     'app/css/custom.min.css',
     // 'app/fonts/**/*',
-    'app/js/custom.js',
-    'app/js/custom.min.js',
+    // 'app/js/custom.js',
+    // 'app/js/custom.min.js',
     'app/img/**/*',
     'app/*.html'
   ], {base: 'app'})
@@ -88,8 +88,8 @@ function build() {
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
-exports.scripts = scripts;
+// exports.scripts = scripts;
 exports.clean = cleanDist;
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, /*scripts,*/ browsersync, watching);
 exports.build = series(cleanDist, build);
